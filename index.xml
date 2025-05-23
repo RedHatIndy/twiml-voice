@@ -1,0 +1,7 @@
+<Response>
+  <Say voice="Polly.Joanna">
+    Hi, this is your automated assistant for Robert B. Summers. Let’s check your eligibility. Are you a first-time buyer? What's your credit score range? Are you planning to move in 30, 60, or 90 days?
+  </Say>
+  <Pause length="2"/>
+  <Redirect>https://make.com/scenario/lead-sorting</Redirect>
+</Response>
