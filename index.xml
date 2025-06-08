@@ -1,7 +1,8 @@
 <Response>
-  <Say voice="Polly.Joanna">
-    Hi, this is your automated assistant for Robert B. Summers. Let’s check your eligibility. Are you a first-time buyer? What's your credit score range? Are you planning to move in 30, 60, or 90 days?
-  </Say>
-  <Pause length="2"/>
-  <Redirect>https://make.com/scenario/lead-sorting</Redirect>
+  <Say voice="alice">${robotResponse}</Say>
+  <Gather input="dtmf speech" action="https://scorepotential.com/api/ai-voice/robot-webhook" method="POST" timeout="10" speechTimeout="3">
+    <Say voice="alice">You can keep talking, or press any key to continue.</Say>
+  </Gather>
+  <Say voice="alice">I didn't hear you. Let me connect you to Robert directly.</Say>
+  <Dial>+13178545117</Dial>
 </Response>
